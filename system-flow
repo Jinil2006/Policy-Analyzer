@@ -1,0 +1,37 @@
+SYSTEM FLOW
+
+1. User opens the website.
+
+2. User uploads a policy or financial document 
+   (PDF such as health insurance, mutual fund, or loan document).
+
+3. Backend receives the uploaded file using Multer.
+
+4. System validates file type and size 
+   (only PDF/DOCX allowed).
+
+5. Text is extracted from the document 
+   using pdf-parse.
+
+6. Extracted text is stored in MongoDB database.
+
+7. System generates insights from the extracted text, such as:
+   - Summary
+   - Key exclusions
+   - Important conditions
+   - Charges or risks
+
+8. System calculates a risk score 
+   based on detected keywords.
+
+9. Insights and summary are displayed on the dashboard.
+
+10. User can start chat with the uploaded document.
+
+11. User asks a question related to the document.
+
+12. Question and document text are sent to AI.
+
+13. AI generates an answer based on document content.
+
+14. Answer is displayed to the user in chat format.
